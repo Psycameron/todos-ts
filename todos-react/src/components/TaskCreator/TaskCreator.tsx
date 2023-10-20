@@ -1,13 +1,17 @@
-import React, { useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 
-export default function TaskCreator({ onSubmit }) {
+interface IProps {
+  onSubmit: (title: string) => void;
+}
+
+export default function TaskCreator({ onSubmit }: IProps) {
   const [title, setTitle] = useState("");
 
-  function onChange(e) {
+  function onChange(e: ChangeEvent<HTMLInputElement>) {
     setTitle(e.target.value);
   }
 
-  function handleSubmit(e) {
+  function handleSubmit(e: FormEvent) {
     e.preventDefault();
 
     onSubmit(title);
