@@ -1,10 +1,12 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 
-interface IProps {
+import { Button, Form, Input } from "./TaskCreator.styled.js";
+
+interface ITaskCreatorProps {
   onSubmit: (title: string) => void;
 }
 
-export default function TaskCreator({ onSubmit }: IProps) {
+export default function TaskCreator({ onSubmit }: ITaskCreatorProps) {
   const [title, setTitle] = useState("");
 
   function onChange(e: ChangeEvent<HTMLInputElement>) {
@@ -19,15 +21,16 @@ export default function TaskCreator({ onSubmit }: IProps) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
+    <Form onSubmit={handleSubmit}>
+      <Input
         type="text"
         name="title"
+        placeholder="Enter a task name"
         required
         onChange={onChange}
         value={title}
       />
-      <button type="submit">Create task</button>
-    </form>
+      <Button type="submit">Create task</Button>
+    </Form>
   );
 }
