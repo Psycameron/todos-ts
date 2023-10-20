@@ -2,9 +2,13 @@ import styled from "styled-components";
 
 export const List = styled.ul`
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
+
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 export const Item = styled.li`
