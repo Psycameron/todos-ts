@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const List = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 10px;
 
   width: 900px;
@@ -50,6 +49,8 @@ export const Button = styled.button`
   padding: 6px 6px;
   background-color: #5938f5;
   border-radius: 10px;
+  border: none;
+
   &:hover {
     background-color: #371fa6;
   }

@@ -16,12 +16,16 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
+  height: 54px;
+
   cursor: pointer;
   color: #ffffff;
   font-size: 24px;
   padding: 10px 10px;
   background-color: #5938f5;
   border-radius: 10px;
+  border: none;
+
   &:hover {
     background-color: #371fa6;
   }
